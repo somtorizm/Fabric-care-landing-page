@@ -107,7 +107,7 @@ To receive form submissions via email:
 
 **Option 1: Formspree (Easy)**
 ```html
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<form action="https://formspree.io/f/mvgwabqo" method="POST">
 ```
 
 **Option 2: EmailJS (Free)**

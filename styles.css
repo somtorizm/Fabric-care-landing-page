@@ -414,12 +414,19 @@ a {
 .service-image {
     height: 200px;
     overflow: hidden;
-    background: linear-gradient(135deg, var(--gray-200), var(--gray-300));
+    background: linear-gradient(135deg, #E8F4FF, #D1E9FF);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-    color: var(--gray-600);
+    color: var(--primary-color);
+    position: relative;
+}
+
+.service-image::before {
+    content: '🧺';
+    font-size: 4rem;
+    opacity: 0.3;
 }
 
 .service-image img {
@@ -427,10 +434,19 @@ a {
     height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .service-card:hover .service-image img {
     transform: scale(1.1);
+}
+
+/* Hide placeholder icon when image loads */
+.service-image img:not([src=""]) ~ ::before,
+.about-image img:not([src=""]) ~ ::before {
+    display: none;
 }
 
 .service-content {
@@ -573,12 +589,19 @@ a {
     overflow: hidden;
     box-shadow: var(--shadow-xl);
     height: 500px;
-    background: linear-gradient(135deg, var(--gray-200), var(--gray-300));
+    background: linear-gradient(135deg, #E8F4FF, #D1E9FF);
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 4rem;
-    color: var(--gray-600);
+    color: var(--primary-color);
+    position: relative;
+}
+
+.about-image::before {
+    content: '✨';
+    font-size: 6rem;
+    opacity: 0.3;
 }
 
 .about-image img {

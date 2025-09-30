@@ -4,14 +4,12 @@ Place your laundromat images in this directory with the following names:
 
 ## Required Images:
 
-1. **self-service.jpg** - Self-service washing machines
-2. **drop-off.jpg** - Drop-off service counter or folded clothes
-3. **pickup-delivery.jpg** - Delivery van or person delivering laundry
-4. **dry-cleaning.jpg** - Dry cleaning garments on hangers
-5. **about-us.jpg** - Team photo or facility exterior/interior
-6. **laundry-machines.jpg** - Modern laundry equipment
-7. **folded-clothes.jpg** - Neatly folded clean clothes
-8. **delivery-van.jpg** - Delivery vehicle
+1. **wash-fold.jpg** - Wash and fold service, folded clothes
+2. **steam-pressing.jpg** - Steam pressing/ironing service
+3. **self-service.jpg** - Self-service washing machines
+4. **drop-off.jpg** - Drop-off full service counter
+5. **about-us.jpg** - Team photo or facility exterior (Cappador Mall)
+6. **og-image.jpg** - Social media preview (1200x630px recommended)
 
 ## Image Specifications:
 
