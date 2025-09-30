@@ -160,50 +160,80 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header">
-                <h2>Affordable Pricing</h2>
-                <p>Choose the plan that works best for you</p>
+                <h2>Transparent Pricing Plans</h2>
+                <p>Quality laundry care that fits your lifestyle and budget</p>
             </div>
             <div class="pricing-grid">
+                <!-- Self-Service Plan -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3>Basic</h3>
-                        <div class="price">₦800<span>/load</span></div>
+                        <h3>Self-Service</h3>
+                        <div class="price">₦4,500<span>/7kg load</span></div>
+                        <p class="price-subtitle">Perfect for students & budget-conscious customers</p>
                     </div>
                     <ul class="pricing-features">
-                        <li>Self-service wash & dry</li>
-                        <li>Modern washing machines</li>
-                        <li>Fast drying equipment</li>
-                        <li>Clean, comfortable facility</li>
+                        <li><strong>1-Hr Timeline</strong></li>
+                        <li>High-efficiency washing machines</li>
+                        <li>Commercial-grade dryers</li>
+                        <li>Free detergent & fabric softener</li>
+                        <li>Free high-speed WiFi</li>
+                        <li>Clean, air-conditioned facility</li>
                     </ul>
-                    <a href="#booking" class="btn btn-outline">Get Started</a>
+                    <a href="#booking" class="btn btn-outline">Choose Plan</a>
                 </div>
+
+                <!-- Full-Service Plan -->
                 <div class="pricing-card featured">
                     <div class="badge">Most Popular</div>
                     <div class="pricing-header">
-                        <h3>Standard</h3>
-                        <div class="price">₦1,200<span>/5kg</span></div>
+                        <h3>Full-Service</h3>
+                        <div class="price">₦6,500<span>/7kg load</span></div>
+                        <p class="price-subtitle">Drop off dirty, pick up fresh & folded</p>
                     </div>
                     <ul class="pricing-features">
-                        <li>Drop-off wash, dry & fold</li>
-                        <li>Professional care</li>
-                        <li>Eco-friendly detergents</li>
-                        <li>Same-day service available</li>
+                        <li><strong>Service Type:</strong> We wash, dry & fold</li>
+                        <li><strong>⚡Turnaround:</strong>2hrs</li>
+                        <li><strong>🧺 What's Included:</strong></li>
+                        <li>Professional washing & drying</li>
+                        <li>Expertly folded & packaged</li>
+                        <li>Premium eco-friendly detergents</li>
+                        <li>Steam ironing included</li>
+                        <li>Stain treatment at no extra cost</li>
+                        <li>Separate color sorting</li>
+                        <li>SMS/WhatsApp notifications</li>
+                        <li>Satisfaction guarantee</li>
                     </ul>
-                    <a href="#booking" class="btn btn-primary">Get Started</a>
+                    <a href="#booking" class="btn btn-primary">Choose Plan</a>
                 </div>
+
+                <!-- Premium Delivery Plan -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <h3>Premium</h3>
-                        <div class="price">₦1,500<span>/5kg</span></div>
+                        <h3>Premium Delivery</h3>
+                        <div class="price">₦9,500<span>/9kg load</span></div>
+                        <p class="price-subtitle">Ultimate convenience at your doorstep</p>
                     </div>
                     <ul class="pricing-features">
-                        <li>Pickup & delivery service</li>
-                        <li>Doorstep convenience</li>
-                        <li>Priority processing</li>
-                        <li>Flexible scheduling</li>
+                        <li><strong>Service Type:</strong> Pickup & delivery</li>
+                        <li><strong>⚡ Turnaround:</strong> 24-48 hours</li>
+                        <li><strong>🧺 What's Included:</strong></li>
+                        <li>• Free pickup & delivery</li>
+                        <li>• All Full-Service features</li>
+                        <li>• Priority processing</li>
+                        <li>• Flexible scheduling (7 days/week)</li>
+                        <li>• Delicate fabric care</li>
+                        <li>• Clothes on hangers option</li>
+                        <li>• Real-time order tracking</li>
+                        <li>• Dedicated customer support</li>
                     </ul>
-                    <a href="#booking" class="btn btn-outline">Get Started</a>
+                    <a href="#booking" class="btn btn-outline">Choose Plan</a>
                 </div>
+            </div>
+
+            <!-- Additional Info -->
+            <div class="pricing-notes">
+                <p><strong>📦 Additional Services:</strong> Ironing only: ₦500/item • Express service: +₦2,000 • Delicate items: +₦1,500</p>
+                <p><strong>💳 Payment:</strong> Cash, Bank Transfer, or Card accepted • No hidden fees</p>
             </div>
         </div>
     </section>
@@ -283,7 +313,11 @@
                 <p>Schedule a pickup or visit us today</p>
             </div>
             <div class="booking-wrapper">
-                <form class="booking-form" id="bookingForm">
+                <form class="booking-form" id="bookingForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <input type="hidden" name="_subject" value="New Booking from Fabricare.ng">
+                    <input type="hidden" name="_next" value="https://fabricare.ng/thank-you.html">
+                    <input type="hidden" name="_template" value="table">
+
                     <div class="form-group">
                         <label for="name">Full Name</label>
                         <input type="text" id="name" name="name" required>
@@ -407,7 +441,10 @@
             </div>
             <div class="contact-wrapper">
                 <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <input type="hidden" name="_subject" value="New Contact Message from Fabricare.ng">
+                        <input type="hidden" name="_next" value="https://fabricare.ng/thank-you.html">
+
                         <div class="form-group">
                             <label for="contact-name">Name</label>
                             <input type="text" id="contact-name" name="name" required>
