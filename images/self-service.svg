@@ -1,0 +1,212 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradientSelf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F4FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D1E9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C1E4F5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="washerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F8FAFC;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E2E8F0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="dryerGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F1F5F9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#CBD5E1;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="drumGlow">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#4A90E2;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="glassReflect">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.6" />
+      <stop offset="70%" style="stop-color:#FFFFFF;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradientSelf)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="120" r="70" fill="#4A90E2" opacity="0.08"/>
+  <circle cx="680" cy="480" r="90" fill="#5BB5D8" opacity="0.08"/>
+  <circle cx="720" cy="150" r="60" fill="#4ECDC4" opacity="0.08"/>
+  <circle cx="120" cy="520" r="50" fill="#FF6B9D" opacity="0.08"/>
+
+  <!-- Washing Machine (Left) -->
+  <g transform="translate(150, 200)">
+    <!-- Machine body -->
+    <rect x="0" y="0" width="180" height="240" rx="12" fill="url(#washerGrad)"/>
+    <rect x="0" y="0" width="180" height="240" rx="12" fill="none" stroke="#94A3B8" stroke-width="3"/>
+
+    <!-- Control panel -->
+    <rect x="10" y="10" width="160" height="45" rx="8" fill="#334155"/>
+
+    <!-- Display screen -->
+    <rect x="25" y="20" width="70" height="25" rx="4" fill="#1E293B"/>
+    <rect x="30" y="24" width="60" height="17" rx="2" fill="#0EA5E9"/>
+    <text x="60" y="37" font-family="monospace" font-size="10" fill="#FFFFFF" text-anchor="middle">15:30</text>
+
+    <!-- Control buttons -->
+    <circle cx="120" cy="27" r="8" fill="#4A90E2"/>
+    <circle cx="140" cy="27" r="8" fill="#5BB5D8"/>
+    <circle cx="160" cy="27" r="8" fill="#4ECDC4"/>
+
+    <!-- Detergent dispenser -->
+    <rect x="20" y="63" width="140" height="15" rx="3" fill="#CBD5E1"/>
+    <rect x="25" y="66" width="40" height="9" rx="2" fill="#94A3B8"/>
+    <rect x="70" y="66" width="40" height="9" rx="2" fill="#94A3B8"/>
+    <rect x="115" y="66" width="40" height="9" rx="2" fill="#94A3B8"/>
+
+    <!-- Door/Window -->
+    <circle cx="90" cy="155" r="70" fill="#1E293B"/>
+    <circle cx="90" cy="155" r="65" fill="#0F172A"/>
+
+    <!-- Glass reflection effect -->
+    <circle cx="90" cy="155" r="65" fill="url(#glassReflect)"/>
+
+    <!-- Door seal -->
+    <circle cx="90" cy="155" r="70" fill="none" stroke="#64748B" stroke-width="4"/>
+
+    <!-- Drum interior -->
+    <circle cx="90" cy="155" r="58" fill="#1E293B"/>
+
+    <!-- Drum holes pattern -->
+    <circle cx="65" cy="130" r="3" fill="#0F172A"/>
+    <circle cx="80" cy="125" r="3" fill="#0F172A"/>
+    <circle cx="100" cy="125" r="3" fill="#0F172A"/>
+    <circle cx="115" cy="130" r="3" fill="#0F172A"/>
+    <circle cx="120" cy="145" r="3" fill="#0F172A"/>
+    <circle cx="120" cy="165" r="3" fill="#0F172A"/>
+    <circle cx="115" cy="180" r="3" fill="#0F172A"/>
+    <circle cx="100" cy="185" r="3" fill="#0F172A"/>
+    <circle cx="80" cy="185" r="3" fill="#0F172A"/>
+    <circle cx="65" cy="180" r="3" fill="#0F172A"/>
+    <circle cx="60" cy="165" r="3" fill="#0F172A"/>
+    <circle cx="60" cy="145" r="3" fill="#0F172A"/>
+
+    <!-- Water/clothes inside (animated) -->
+    <circle cx="90" cy="155" r="40" fill="#4A90E2" opacity="0.2">
+      <animate attributeName="r" values="40;45;40" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.3;0.2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Door handle -->
+    <rect x="155" y="150" width="8" height="30" rx="4" fill="#64748B"/>
+
+    <!-- Brand badge -->
+    <text x="90" y="235" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A90E2" text-anchor="middle">WASH PRO</text>
+  </g>
+
+  <!-- Dryer Machine (Right) -->
+  <g transform="translate(470, 200)">
+    <!-- Machine body -->
+    <rect x="0" y="0" width="180" height="240" rx="12" fill="url(#dryerGrad)"/>
+    <rect x="0" y="0" width="180" height="240" rx="12" fill="none" stroke="#94A3B8" stroke-width="3"/>
+
+    <!-- Control panel -->
+    <rect x="10" y="10" width="160" height="45" rx="8" fill="#334155"/>
+
+    <!-- Temperature dial -->
+    <circle cx="40" cy="32" r="15" fill="#1E293B"/>
+    <circle cx="40" cy="32" r="12" fill="#FF6B9D"/>
+    <line x1="40" y1="32" x2="40" y2="22" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Timer dial -->
+    <circle cx="90" cy="32" r="15" fill="#1E293B"/>
+    <circle cx="90" cy="32" r="12" fill="#5BB5D8"/>
+    <line x1="90" y1="32" x2="95" y2="27" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Start button -->
+    <circle cx="140" cy="32" r="15" fill="#4ECDC4"/>
+    <text x="140" y="37" font-family="Arial" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">▶</text>
+
+    <!-- Settings indicators -->
+    <rect x="20" y="63" width="140" height="15" rx="3" fill="#CBD5E1"/>
+    <text x="90" y="74" font-family="monospace" font-size="9" fill="#334155" text-anchor="middle">DELICATE • WARM</text>
+
+    <!-- Door/Window -->
+    <circle cx="90" cy="155" r="70" fill="#1E293B"/>
+    <circle cx="90" cy="155" r="65" fill="#0F172A"/>
+
+    <!-- Glass reflection -->
+    <circle cx="90" cy="155" r="65" fill="url(#glassReflect)"/>
+
+    <!-- Door seal -->
+    <circle cx="90" cy="155" r="70" fill="none" stroke="#64748B" stroke-width="4"/>
+
+    <!-- Drum interior with ridges -->
+    <circle cx="90" cy="155" r="58" fill="#334155"/>
+
+    <!-- Drum ridges -->
+    <rect x="85" y="100" width="10" height="110" rx="2" fill="#475569" opacity="0.5"/>
+    <rect x="60" y="110" width="8" height="90" rx="2" fill="#475569" opacity="0.5" transform="rotate(-30 90 155)"/>
+    <rect x="110" y="110" width="8" height="90" rx="2" fill="#475569" opacity="0.5" transform="rotate(30 90 155)"/>
+
+    <!-- Tumbling clothes (animated) -->
+    <ellipse cx="90" cy="145" rx="25" ry="15" fill="#FF8AAB" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" values="0 90 155;360 90 155" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="90" cy="165" rx="20" ry="12" fill="#5BB5D8" opacity="0.6">
+      <animateTransform attributeName="transform" type="rotate" values="180 90 155;540 90 155" dur="4s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Heat glow effect -->
+    <circle cx="90" cy="155" r="50" fill="url(#drumGlow)">
+      <animate attributeName="opacity" values="0.3;0.5;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Door handle -->
+    <rect x="155" y="150" width="8" height="30" rx="4" fill="#64748B"/>
+
+    <!-- Brand badge -->
+    <text x="90" y="235" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#4A90E2" text-anchor="middle">DRY PRO</text>
+  </g>
+
+  <!-- Coin/payment icon -->
+  <g transform="translate(360, 180)">
+    <circle cx="40" cy="40" r="35" fill="#FFFFFF" opacity="0.9"/>
+    <circle cx="40" cy="40" r="30" fill="#FFD700"/>
+    <circle cx="40" cy="40" r="25" fill="#FFC700"/>
+    <text x="40" y="50" font-family="Arial" font-size="24" font-weight="bold" fill="#FF6B9D" text-anchor="middle">₦</text>
+  </g>
+
+  <!-- Sparkles for cleanliness -->
+  <g opacity="0.7">
+    <path d="M 380,480 L 386,492 L 392,480 L 386,468 Z" fill="#4A90E2"/>
+    <circle cx="386" cy="480" r="3" fill="#FFFFFF"/>
+
+    <path d="M 220,140 L 225,150 L 230,140 L 225,130 Z" fill="#5BB5D8"/>
+    <circle cx="225" cy="140" r="2.5" fill="#FFFFFF"/>
+
+    <path d="M 580,140 L 585,150 L 590,140 L 585,130 Z" fill="#4ECDC4"/>
+    <circle cx="585" cy="140" r="2.5" fill="#FFFFFF"/>
+
+    <path d="M 420,500 L 424,508 L 428,500 L 424,492 Z" fill="#FF6B9D"/>
+    <circle cx="424" cy="500" r="2.5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- "Self Service" badge -->
+  <g transform="translate(315, 80)">
+    <rect x="0" y="0" width="170" height="60" rx="12" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="0" y="0" width="170" height="60" rx="12" fill="none" stroke="#4A90E2" stroke-width="3"/>
+    <text x="85" y="28" font-family="Poppins, Arial" font-size="16" font-weight="700" fill="#4A90E2" text-anchor="middle">
+      SELF-SERVICE
+    </text>
+    <text x="85" y="48" font-family="Inter, Arial" font-size="13" font-weight="500" fill="#5BB5D8" text-anchor="middle">
+      Modern Facilities
+    </text>
+  </g>
+
+  <!-- Price tag -->
+  <g transform="translate(550, 480)">
+    <rect x="0" y="0" width="160" height="55" rx="8" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="0" y="0" width="160" height="55" rx="8" fill="none" stroke="#4A90E2" stroke-width="2"/>
+    <text x="80" y="24" font-family="Poppins, Arial" font-size="14" font-weight="700" fill="#4A90E2" text-anchor="middle">
+      SELF-SERVICE
+    </text>
+    <text x="80" y="43" font-family="Inter, Arial" font-size="12" font-weight="500" fill="#5BB5D8" text-anchor="middle">
+      From ₦4,500/bag
+    </text>
+  </g>
+</svg>

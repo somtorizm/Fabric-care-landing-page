@@ -2,17 +2,147 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-menuToggle.addEventListener('click', () => {
-    menuToggle.classList.toggle('active');
-    navLinks.classList.toggle('active');
-});
-
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        menuToggle.classList.remove('active');
-        navLinks.classList.remove('active');
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
     });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+}
+
+// ============================================
+// TESTIMONIAL SLIDER
+// ============================================
+const testimonialSlider = () => {
+    const track = document.querySelector('.testimonial-track');
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dotsContainer = document.querySelector('.slider-dots');
+
+    if (!track || slides.length === 0) return;
+
+    let currentIndex = 0;
+    const totalSlides = slides.length;
+
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('slider-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll('.slider-dot');
+
+    function updateSlider() {
+        // Update slides
+        slides.forEach((slide, index) => {
+            slide.classList.remove('active');
+            if (index === currentIndex) {
+                slide.classList.add('active');
+            }
+        });
+
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.remove('active');
+            if (index === currentIndex) {
+                dot.classList.add('active');
+            }
+        });
+
+        // Move track
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function goToSlide(index) {
+        currentIndex = index;
+        updateSlider();
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    }
+
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+    // Auto-play slider
+    let autoplayInterval = setInterval(nextSlide, 6000);
+
+    // Pause on hover
+    track.addEventListener('mouseenter', () => {
+        clearInterval(autoplayInterval);
+    });
+
+    track.addEventListener('mouseleave', () => {
+        autoplayInterval = setInterval(nextSlide, 6000);
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+};
+
+// ============================================
+// STATS COUNTER ANIMATION
+// ============================================
+const animateStats = () => {
+    const stats = document.querySelectorAll('.stat-number');
+
+    const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = parseInt(entry.target.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const increment = target / (duration / 16); // 60fps
+                let current = 0;
+
+                const updateCount = () => {
+                    current += increment;
+                    if (current < target) {
+                        entry.target.textContent = Math.floor(current);
+                        requestAnimationFrame(updateCount);
+                    } else {
+                        entry.target.textContent = target;
+                    }
+                };
+
+                updateCount();
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    stats.forEach(stat => observer.observe(stat));
+};
+
+// Initialize testimonial slider when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    testimonialSlider();
+    animateStats();
 });
 
 // Navbar Scroll Effect
@@ -73,85 +203,61 @@ faqItems.forEach(item => {
 // Booking Form Submission
 const bookingForm = document.getElementById('bookingForm');
 
-bookingForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+if (bookingForm) {
+    bookingForm.addEventListener('submit', async (e) => {
+        // Get form data for validation
+        const formData = new FormData(bookingForm);
+        const data = Object.fromEntries(formData);
 
-    // Get form data
-    const formData = new FormData(bookingForm);
-    const data = Object.fromEntries(formData);
+        // Validate form
+        if (!validateBookingForm(data)) {
+            e.preventDefault();
+            return;
+        }
 
-    // Validate form
-    if (!validateBookingForm(data)) {
-        return;
-    }
+        // Show loading state
+        const submitBtn = bookingForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
 
-    // Show loading state
-    const submitBtn = bookingForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Booking...';
-    submitBtn.disabled = true;
-
-    // Simulate API call (replace with actual API endpoint)
-    try {
-        // In production, replace this with actual API call
-        await simulateAPICall(data);
-
-        // Success
-        showNotification('Booking successful! We will contact you shortly.', 'success');
-        bookingForm.reset();
-
-        // Optional: Redirect to WhatsApp
-        const whatsappMessage = encodeURIComponent(
-            `Hi! I'd like to book a service:\n\nName: ${data.name}\nPhone: ${data.phone}\nService: ${data.service}\nDate & Time: ${data.datetime}\nAddress: ${data.address}`
-        );
-
-        // Uncomment to auto-redirect to WhatsApp
-        // window.open(`https://wa.me/2348012345678?text=${whatsappMessage}`, '_blank');
-
-    } catch (error) {
-        showNotification('Booking failed. Please try again or contact us directly.', 'error');
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-});
+        // Note: Form will submit to Formspree automatically
+        // The loading state will show briefly before redirect
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 1000);
+    });
+}
 
 // Contact Form Submission
 const contactForm = document.getElementById('contactForm');
 
-contactForm.addEventListener('submit', async (e) => {
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', async (e) => {
+        // Get form data for validation
+        const formData = new FormData(contactForm);
+        const data = Object.fromEntries(formData);
 
-    // Get form data
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
+        // Validate form
+        if (!validateContactForm(data)) {
+            e.preventDefault();
+            return;
+        }
 
-    // Validate form
-    if (!validateContactForm(data)) {
-        return;
-    }
+        // Show loading state
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
 
-    // Show loading state
-    const submitBtn = contactForm.querySelector('button[type="submit"]');
-    const originalText = submitBtn.textContent;
-    submitBtn.textContent = 'Sending...';
-    submitBtn.disabled = true;
-
-    // Simulate API call (replace with actual API endpoint)
-    try {
-        await simulateAPICall(data);
-
-        // Success
-        showNotification('Message sent successfully! We will get back to you soon.', 'success');
-        contactForm.reset();
-
-    } catch (error) {
-        showNotification('Failed to send message. Please try again.', 'error');
-    } finally {
-        submitBtn.textContent = originalText;
-        submitBtn.disabled = false;
-    }
-});
+        // Note: Form will submit to Formspree automatically
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 1000);
+    });
+}
 
 // Form Validation Functions
 function validateBookingForm(data) {

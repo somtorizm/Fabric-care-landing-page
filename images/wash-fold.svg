@@ -1,0 +1,132 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8F4FF;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#D1E9FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C1E4F5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="basketGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B7355;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6B5645;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="clothGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5BB5D8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="clothGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8AAB;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="clothGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5BB5D8;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="shimmer">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.4" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradient)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="100" cy="100" r="80" fill="#4A90E2" opacity="0.08"/>
+  <circle cx="700" cy="150" r="60" fill="#5BB5D8" opacity="0.08"/>
+  <circle cx="650" cy="450" r="100" fill="#4ECDC4" opacity="0.08"/>
+  <circle cx="150" cy="500" r="70" fill="#FF6B9D" opacity="0.08"/>
+
+  <!-- Laundry basket -->
+  <g transform="translate(300, 250)">
+    <!-- Basket body -->
+    <path d="M 0,0 L 40,100 L 160,100 L 200,0 Z" fill="url(#basketGrad)" opacity="0.9"/>
+    <path d="M 0,0 L 40,100 L 160,100 L 200,0 Z" fill="none" stroke="#6B5645" stroke-width="3"/>
+
+    <!-- Basket weave pattern -->
+    <line x1="20" y1="20" x2="50" y2="80" stroke="#8B7355" stroke-width="2" opacity="0.4"/>
+    <line x1="60" y1="10" x2="80" y2="90" stroke="#8B7355" stroke-width="2" opacity="0.4"/>
+    <line x1="100" y1="10" x2="120" y2="90" stroke="#8B7355" stroke-width="2" opacity="0.4"/>
+    <line x1="140" y1="20" x2="150" y2="80" stroke="#8B7355" stroke-width="2" opacity="0.4"/>
+
+    <!-- Basket handles -->
+    <path d="M 50,-10 Q 50,-30 100,-30 Q 150,-30 150,-10" fill="none" stroke="url(#basketGrad)" stroke-width="6" stroke-linecap="round"/>
+    <circle cx="50" cy="-10" r="8" fill="#8B7355"/>
+    <circle cx="150" cy="-10" r="8" fill="#8B7355"/>
+  </g>
+
+  <!-- Folded clothes stack 1 (blue) -->
+  <g transform="translate(280, 220)">
+    <rect x="0" y="0" width="100" height="20" rx="3" fill="url(#clothGrad1)"/>
+    <rect x="0" y="0" width="100" height="20" rx="3" fill="none" stroke="#357ABD" stroke-width="1.5"/>
+    <line x1="10" y1="5" x2="10" y2="15" stroke="#357ABD" stroke-width="1" opacity="0.3"/>
+    <line x1="90" y1="5" x2="90" y2="15" stroke="#357ABD" stroke-width="1" opacity="0.3"/>
+    <!-- Shimmer effect -->
+    <ellipse cx="70" cy="10" rx="20" ry="8" fill="url(#shimmer)"/>
+  </g>
+
+  <!-- Folded clothes stack 2 (pink) -->
+  <g transform="translate(270, 190)">
+    <rect x="0" y="0" width="110" height="22" rx="3" fill="url(#clothGrad2)"/>
+    <rect x="0" y="0" width="110" height="22" rx="3" fill="none" stroke="#FF5A8D" stroke-width="1.5"/>
+    <line x1="15" y1="6" x2="15" y2="16" stroke="#FF5A8D" stroke-width="1" opacity="0.3"/>
+    <line x1="95" y1="6" x2="95" y2="16" stroke="#FF5A8D" stroke-width="1" opacity="0.3"/>
+    <ellipse cx="75" cy="11" rx="22" ry="9" fill="url(#shimmer)"/>
+  </g>
+
+  <!-- Folded clothes stack 3 (teal) -->
+  <g transform="translate(285, 160)">
+    <rect x="0" y="0" width="95" height="21" rx="3" fill="url(#clothGrad3)"/>
+    <rect x="0" y="0" width="95" height="21" rx="3" fill="none" stroke="#3DAAA3" stroke-width="1.5"/>
+    <line x1="12" y1="5" x2="12" y2="16" stroke="#3DAAA3" stroke-width="1" opacity="0.3"/>
+    <line x1="83" y1="5" x2="83" y2="16" stroke="#3DAAA3" stroke-width="1" opacity="0.3"/>
+    <ellipse cx="65" cy="10" rx="20" ry="8" fill="url(#shimmer)"/>
+  </g>
+
+  <!-- Sparkles -->
+  <g opacity="0.6">
+    <path d="M 520,180 L 525,190 L 530,180 L 525,170 Z" fill="#4A90E2"/>
+    <circle cx="525" cy="180" r="3" fill="#FFFFFF"/>
+
+    <path d="M 250,140 L 254,148 L 258,140 L 254,132 Z" fill="#5BB5D8"/>
+    <circle cx="254" cy="140" r="2.5" fill="#FFFFFF"/>
+
+    <path d="M 580,320 L 586,332 L 592,320 L 586,308 Z" fill="#4ECDC4"/>
+    <circle cx="586" cy="320" r="3" fill="#FFFFFF"/>
+
+    <path d="M 200,280 L 204,288 L 208,280 L 204,272 Z" fill="#FF6B9D"/>
+    <circle cx="204" cy="280" r="2.5" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Fresh icon -->
+  <g transform="translate(450, 200)">
+    <circle cx="50" cy="50" r="55" fill="#FFFFFF" opacity="0.3"/>
+    <circle cx="50" cy="50" r="50" fill="none" stroke="#4A90E2" stroke-width="4"/>
+
+    <!-- Check mark -->
+    <path d="M 30,50 L 43,63 L 70,35" fill="none" stroke="#4A90E2" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- Text -->
+    <text x="50" y="120" font-family="Poppins, Arial" font-size="16" font-weight="700" fill="#4A90E2" text-anchor="middle">
+      FRESH &amp; CLEAN
+    </text>
+  </g>
+
+  <!-- Fabric softener drops -->
+  <g opacity="0.5">
+    <ellipse cx="340" cy="380" rx="6" ry="8" fill="#5BB5D8"/>
+    <ellipse cx="360" cy="390" rx="5" ry="7" fill="#4ECDC4"/>
+    <ellipse cx="380" cy="385" rx="6" ry="8" fill="#4A90E2"/>
+  </g>
+
+  <!-- Label/tag -->
+  <g transform="translate(100, 420)">
+    <rect x="0" y="0" width="150" height="50" rx="8" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="0" y="0" width="150" height="50" rx="8" fill="none" stroke="#4A90E2" stroke-width="2"/>
+    <text x="75" y="22" font-family="Poppins, Arial" font-size="14" font-weight="700" fill="#4A90E2" text-anchor="middle">
+      FLAT RATE
+    </text>
+    <text x="75" y="40" font-family="Inter, Arial" font-size="12" font-weight="500" fill="#5BB5D8" text-anchor="middle">
+      From ₦4,500/bag
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,177 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0F4F8;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E8F4FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D1E9FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ironGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6B7280;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4B5563;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="shirtGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F0F8FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="steamGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#4A90E2;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bg)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="650" cy="100" r="70" fill="#4ECDC4" opacity="0.08"/>
+  <circle cx="150" cy="500" r="90" fill="#5BB5D8" opacity="0.08"/>
+  <circle cx="700" cy="450" r="60" fill="#4A90E2" opacity="0.08"/>
+
+  <!-- Ironing board -->
+  <g transform="translate(250, 300)">
+    <!-- Board surface -->
+    <ellipse cx="150" cy="-10" rx="180" ry="70" fill="#E8F4FF" opacity="0.6"/>
+    <path d="M -20,-10 Q 150,-40 320,-10 L 315,0 Q 150,-28 -15,0 Z" fill="#D1E9FF"/>
+    <path d="M -20,-10 Q 150,-40 320,-10" fill="none" stroke="#CBD5E0" stroke-width="2"/>
+
+    <!-- Board pattern -->
+    <line x1="50" y1="-25" x2="50" y2="-5" stroke="#CBD5E0" stroke-width="1" opacity="0.4"/>
+    <line x1="100" y1="-30" x2="100" y2="-8" stroke="#CBD5E0" stroke-width="1" opacity="0.4"/>
+    <line x1="150" y1="-32" x2="150" y2="-10" stroke="#CBD5E0" stroke-width="1" opacity="0.4"/>
+    <line x1="200" y1="-30" x2="200" y2="-8" stroke="#CBD5E0" stroke-width="1" opacity="0.4"/>
+    <line x1="250" y1="-25" x2="250" y2="-5" stroke="#CBD5E0" stroke-width="1" opacity="0.4"/>
+
+    <!-- Legs -->
+    <line x1="30" y1="0" x2="20" y2="140" stroke="#9CA3AF" stroke-width="4"/>
+    <line x1="270" y1="0" x2="280" y2="140" stroke="#9CA3AF" stroke-width="4"/>
+    <circle cx="20" cy="140" r="6" fill="#6B7280"/>
+    <circle cx="280" cy="140" r="6" fill="#6B7280"/>
+  </g>
+
+  <!-- Dress shirt on hanger -->
+  <g transform="translate(120, 150)">
+    <!-- Hanger -->
+    <path d="M 100,-20 Q 80,-35 60,-20" fill="none" stroke="#8B7355" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="100" cy="-20" r="4" fill="#8B7355"/>
+    <line x1="100" y1="-20" x2="100" y2="0" stroke="#8B7355" stroke-width="2"/>
+
+    <!-- Shirt -->
+    <g>
+      <!-- Collar -->
+      <path d="M 85,5 L 90,0 L 95,3 L 100,0 L 105,3 L 110,0 L 115,5" fill="url(#shirtGrad)" stroke="#CBD5E0" stroke-width="1.5"/>
+
+      <!-- Body -->
+      <rect x="70" y="5" width="60" height="80" rx="3" fill="url(#shirtGrad)" stroke="#CBD5E0" stroke-width="1.5"/>
+
+      <!-- Buttons -->
+      <circle cx="100" cy="20" r="2" fill="#4A90E2"/>
+      <circle cx="100" cy="35" r="2" fill="#4A90E2"/>
+      <circle cx="100" cy="50" r="2" fill="#4A90E2"/>
+      <circle cx="100" cy="65" r="2" fill="#4A90E2"/>
+
+      <!-- Pocket -->
+      <rect x="108" y="18" width="15" height="18" rx="2" fill="none" stroke="#CBD5E0" stroke-width="1"/>
+
+      <!-- Sleeves -->
+      <path d="M 70,10 L 50,30 L 55,70 L 70,60 Z" fill="url(#shirtGrad)" stroke="#CBD5E0" stroke-width="1.5"/>
+      <path d="M 130,10 L 150,30 L 145,70 L 130,60 Z" fill="url(#shirtGrad)" stroke="#CBD5E0" stroke-width="1.5"/>
+
+      <!-- Crisp lines (to show it's pressed) -->
+      <line x1="100" y1="5" x2="100" y2="85" stroke="#4A90E2" stroke-width="0.5" opacity="0.3"/>
+      <line x1="85" y1="10" x2="85" y2="80" stroke="#4A90E2" stroke-width="0.5" opacity="0.2"/>
+      <line x1="115" y1="10" x2="115" y2="80" stroke="#4A90E2" stroke-width="0.5" opacity="0.2"/>
+    </g>
+  </g>
+
+  <!-- Steam iron -->
+  <g transform="translate(450, 240)">
+    <!-- Iron base/soleplate -->
+    <ellipse cx="0" cy="60" rx="65" ry="15" fill="#374151" opacity="0.3"/>
+    <path d="M -60,50 L -55,60 L 55,60 L 60,50 L 45,45 L -45,45 Z" fill="url(#ironGrad)"/>
+
+    <!-- Steam holes -->
+    <circle cx="-30" cy="52" r="2" fill="#1F2937"/>
+    <circle cx="-15" cy="52" r="2" fill="#1F2937"/>
+    <circle cx="0" cy="52" r="2" fill="#1F2937"/>
+    <circle cx="15" cy="52" r="2" fill="#1F2937"/>
+    <circle cx="30" cy="52" r="2" fill="#1F2937"/>
+
+    <!-- Iron body -->
+    <path d="M -45,45 Q -50,20 -40,0 L 40,0 Q 50,20 45,45 Z" fill="#6B7280"/>
+    <path d="M -45,45 Q -50,20 -40,0 L 40,0 Q 50,20 45,45 Z" fill="none" stroke="#4B5563" stroke-width="2"/>
+
+    <!-- Handle -->
+    <path d="M -25,0 L -20,-15 Q -15,-25 0,-25 Q 15,-25 20,-15 L 25,0" fill="none" stroke="#374151" stroke-width="6" stroke-linecap="round"/>
+
+    <!-- Details/vent -->
+    <rect x="-15" y="15" width="30" height="20" rx="3" fill="#4B5563"/>
+    <line x1="-10" y1="20" x2="10" y2="20" stroke="#374151" stroke-width="1"/>
+    <line x1="-10" y1="25" x2="10" y2="25" stroke="#374151" stroke-width="1"/>
+    <line x1="-10" y1="30" stroke="#374151" stroke-width="1"/>
+
+    <!-- Temperature indicator -->
+    <circle cx="25" cy="25" r="6" fill="#FF6B9D"/>
+    <circle cx="25" cy="25" r="4" fill="#FF8AAB"/>
+  </g>
+
+  <!-- Steam clouds -->
+  <g opacity="0.6">
+    <!-- Steam 1 -->
+    <ellipse cx="480" cy="200" rx="20" ry="30" fill="url(#steamGrad)">
+      <animate attributeName="ry" values="30;40;30" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="2s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Steam 2 -->
+    <ellipse cx="460" cy="190" rx="18" ry="28" fill="url(#steamGrad)">
+      <animate attributeName="ry" values="28;38;28" dur="2.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2.3s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Steam 3 -->
+    <ellipse cx="500" cy="195" rx="22" ry="32" fill="url(#steamGrad)">
+      <animate attributeName="ry" values="32;42;32" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.2;0.6" dur="1.8s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- Sparkles for freshness -->
+  <g opacity="0.7">
+    <path d="M 180,120 L 184,128 L 188,120 L 184,112 Z" fill="#4A90E2"/>
+    <circle cx="184" cy="120" r="2.5" fill="#FFFFFF"/>
+
+    <path d="M 220,200 L 223,206 L 226,200 L 223,194 Z" fill="#5BB5D8"/>
+    <circle cx="223" cy="200" r="2" fill="#FFFFFF"/>
+
+    <path d="M 160,180 L 163,186 L 166,180 L 163,174 Z" fill="#4ECDC4"/>
+    <circle cx="163" cy="180" r="2" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Price tag -->
+  <g transform="translate(550, 450)">
+    <rect x="0" y="0" width="160" height="55" rx="8" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="0" y="0" width="160" height="55" rx="8" fill="none" stroke="#4A90E2" stroke-width="2"/>
+    <text x="80" y="24" font-family="Poppins, Arial" font-size="14" font-weight="700" fill="#4A90E2" text-anchor="middle">
+      PROFESSIONAL
+    </text>
+    <text x="80" y="43" font-family="Inter, Arial" font-size="12" font-weight="500" fill="#5BB5D8" text-anchor="middle">
+      From ₦350/item
+    </text>
+  </g>
+
+  <!-- "Sharp & Polished" badge -->
+  <g transform="translate(50, 50)">
+    <circle cx="60" cy="60" r="60" fill="#FFFFFF" opacity="0.3"/>
+    <circle cx="60" cy="60" r="55" fill="none" stroke="#4A90E2" stroke-width="3"/>
+    <text x="60" y="55" font-family="Poppins, Arial" font-size="16" font-weight="700" fill="#4A90E2" text-anchor="middle">
+      SHARP &amp;
+    </text>
+    <text x="60" y="72" font-family="Poppins, Arial" font-size="16" font-weight="700" fill="#4A90E2" text-anchor="middle">
+      POLISHED
+    </text>
+  </g>
+</svg>
