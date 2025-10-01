@@ -5,6 +5,18 @@
 [build.environment]
   NODE_VERSION = "18"
 
+[[redirects]]
+  from = "/styles.css"
+  to = "/styles.css"
+  status = 200
+  force = false
+
+[[redirects]]
+  from = "/script.js"
+  to = "/script.js"
+  status = 200
+  force = false
+
 [[headers]]
   for = "/*"
   [headers.values]
