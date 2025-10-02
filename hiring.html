@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join Fabricare Laundromat - Now Hiring Laundry-man. Competitive salary ₦70k-80k based on experience. Ages 18-30. Apply today!">
+    <meta name="keywords" content="laundry jobs Enugu, hiring laundry-man, fabricare jobs, laundromat careers">
+
+    <title>Join Our Team - Fabricare Laundromat Hiring</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Hiring Page Specific Styles -->
+    <style>
+        .hiring-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #4A90E2 0%, #5BB5D8 50%, #4ECDC4 100%);
+            position: relative;
+            overflow: hidden;
+            margin-top: 72px;
+            padding: 4rem 0;
+        }
+
+        .hiring-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image:
+                radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(135, 206, 235, 0.15) 0%, transparent 50%);
+            opacity: 1;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hiring-icon-container {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hiring-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 1.5rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s ease-in-out infinite;
+            position: relative;
+        }
+
+        .hiring-icon::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            animation: ripple 2s ease-out infinite;
+        }
+
+        .hiring-icon svg {
+            width: 65px;
+            height: 65px;
+            fill: none;
+            stroke: url(#gradient);
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.3);
+                opacity: 0;
+            }
+        }
+
+        .hiring-content {
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hiring-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 2rem;
+            border-radius: 2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .job-details {
+            padding: 6rem 0;
+            background: linear-gradient(180deg, var(--white) 0%, var(--light-color) 100%);
+        }
+
+        .job-card {
+            background: var(--white);
+            border-radius: 2rem;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(74, 144, 226, 0.15);
+            max-width: 900px;
+            margin: 0 auto;
+            border: 1px solid rgba(74, 144, 226, 0.1);
+        }
+
+        .job-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .job-title {
+            font-size: 2.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .job-salary {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-requirement-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-teal), var(--secondary-color));
+            color: var(--white);
+            padding: 0.5rem 1.5rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .job-section {
+            margin-bottom: 3rem;
+        }
+
+        .job-section h3 {
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .job-section h3::before {
+            content: '';
+            width: 4px;
+            height: 30px;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+
+        .job-section p {
+            color: var(--gray-600);
+            line-height: 1.8;
+            font-size: 1.125rem;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .benefit-item {
+            background: var(--light-color);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            border-left: 4px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .benefit-item:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
+        }
+
+        .benefit-item strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .apply-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            padding: 3rem;
+            border-radius: 1.5rem;
+            text-align: center;
+            color: var(--white);
+            margin-top: 3rem;
+        }
+
+        .apply-section h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .apply-section p {
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .apply-btn {
+            background: var(--white);
+            color: var(--primary-color);
+            padding: 1rem 3rem;
+            border-radius: 3rem;
+            font-weight: 700;
+            font-size: 1.125rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .apply-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .hiring-hero {
+                min-height: 50vh;
+                padding: 3rem 0;
+            }
+
+            .hiring-icon {
+                width: 100px;
+                height: 100px;
+            }
+
+            .hiring-icon svg {
+                width: 50px;
+                height: 50px;
+            }
+
+            .job-card {
+                padding: 2rem 1.5rem;
+            }
+
+            .job-title {
+                font-size: 2rem;
+            }
+
+            .job-salary {
+                font-size: 1.75rem;
+            }
+
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .apply-section {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="images/logo1.svg" alt="Fabricare Logo">
+                    <div>
+                        <h2>Fabricare</h2>
+                        <span class="logo-tagline">Laundromat</span>
+                    </div>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="index.html#services">Services</a></li>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="hiring.html" style="color: var(--primary-color);">Careers</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                    <li><a href="index.html#booking" class="btn-nav">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hiring Hero Section -->
+    <section class="hiring-hero">
+        <div class="container">
+            <div class="hiring-content">
+                <div class="hiring-icon-container">
+                    <div class="hiring-icon">
+                        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#5BB5D8;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <!-- Briefcase icon -->
+                            <rect x="8" y="20" width="48" height="32" rx="4" />
+                            <path d="M20 20 V14 C20 11.8 21.8 10 24 10 H40 C42.2 10 44 11.8 44 14 V20" />
+                            <path d="M8 28 H56" />
+                            <circle cx="32" cy="36" r="3" fill="url(#gradient)" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="hiring-badge">NOW HIRING</div>
+                <h1 class="hero-headline">Join Our Growing Team</h1>
+                <p class="hero-subheadline">Building the future of laundry services in Enugu</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Details Section -->
+    <section class="job-details">
+        <div class="container">
+            <div class="job-card">
+                <div class="job-header">
+                    <h2 class="job-title">Laundry-man</h2>
+                    <div class="job-salary">₦70,000 - ₦80,000/month</div>
+                    <p style="color: var(--gray-600); margin-top: 0.5rem;">Based on experience</p>
+                    <div class="job-requirement-badge">Age: 18-30 years</div>
+                </div>
+
+                <div class="job-section">
+                    <h3>Main Responsibilities</h3>
+                    <p>As a Laundry-man at Fabricare, you will be responsible for supervising our state-of-the-art washing machines and performing professional ironing services. You'll ensure that all laundry is processed to the highest standards, maintaining the quality and cleanliness our customers expect.</p>
+                </div>
+
+                <div class="job-section">
+                    <h3>Key Duties Include</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <strong>Machine Supervision</strong>
+                            Monitor and operate commercial washing and drying equipment
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Ironing & Pressing</strong>
+                            Provide expert steam pressing and ironing services
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Quality Control</strong>
+                            Ensure all items meet our quality standards
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Customer Service</strong>
+                            Maintain excellent service delivery and customer satisfaction
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-section">
+                    <h3>Staff Benefits</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <strong>Competitive Salary</strong>
+                            ₦70k-80k based on your experience and skills
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Professional Growth</strong>
+                            Training and career development opportunities
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Modern Workspace</strong>
+                            Work with state-of-the-art equipment in a clean environment
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Team Environment</strong>
+                            Join a supportive and professional team
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Health Benefits</strong>
+                            Basic healthcare coverage included
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Performance Bonuses</strong>
+                            Earn extra based on exceptional performance
+                        </div>
+                    </div>
+                </div>
+
+                <div class="job-section">
+                    <h3>Requirements</h3>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <strong>Age Range</strong>
+                            18-30 years old
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Physical Fitness</strong>
+                            Able to stand for extended periods and lift moderate loads
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Attention to Detail</strong>
+                            Careful and thorough in handling customer items
+                        </div>
+                        <div class="benefit-item">
+                            <strong>Team Player</strong>
+                            Works well with others and follows instructions
+                        </div>
+                    </div>
+                </div>
+
+                <div class="apply-section">
+                    <h3>Ready to Join Us?</h3>
+                    <p>Send your CV and a brief cover letter to get started on your career with Fabricare!</p>
+                    <a href="mailto:jobs@fabricare.ng?subject=Application for Laundry-man Position" class="apply-btn">
+                        Apply Now
+                    </a>
+                    <div style="margin-top: 1.5rem; opacity: 0.9;">
+                        <p style="margin-bottom: 0.5rem;">Or contact us directly:</p>
+                        <a href="tel:+2348012345678" style="color: var(--white); text-decoration: underline;">+234 801 234 5678</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Fabricare Laundromat</h3>
+                    <p>Clean Clothes, Fresh Start</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/2348012345678" aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="index.html#pricing">Pricing</a></li>
+                        <li><a href="hiring.html">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="index.html#services">Wash & Fold</a></li>
+                        <li><a href="index.html#services">Steam Pressing</a></li>
+                        <li><a href="index.html#services">Self-Service</a></li>
+                        <li><a href="index.html#services">Full-Service</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>2 Prof. Chike Onochie Crescent</li>
+                        <li>New Haven Extension, Enugu State.</li>
+                        <li>+234 801 234 5678</li>
+                        <li>jobs@fabricare.ng</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Fabricare Laundromat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
