@@ -26,7 +26,6 @@
     <!-- Preconnect to external resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="dns-prefetch" href="https://formspree.io">
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -624,10 +623,11 @@
                 <p>Schedule a pickup or visit us today</p>
             </div>
             <div class="booking-wrapper">
-                <form class="booking-form" id="bookingForm" action="https://formspree.io/f/mvgwabqo" method="POST">
-                    <input type="hidden" name="_subject" value="New Booking from Fabricare.ng">
-                    <input type="hidden" name="_next" value="https://fabricare.ng/thank-you.html">
-                    <input type="hidden" name="_template" value="table">
+                <form class="booking-form" id="bookingForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" name="booking">
+                    <input type="hidden" name="form-name" value="booking">
+                    <p style="display: none;">
+                        <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                    </p>
 
                     <div class="form-group">
                         <label for="name">Full Name</label>
@@ -753,9 +753,11 @@
             </div>
             <div class="contact-wrapper">
                 <div class="contact-form-container">
-                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/mvgwabqo" method="POST">
-                        <input type="hidden" name="_subject" value="New Contact Message from Fabricare.ng">
-                        <input type="hidden" name="_next" value="https://fabricare.ng/thank-you.html">
+                    <form class="contact-form" id="contactForm" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" name="contact">
+                        <input type="hidden" name="form-name" value="contact">
+                        <p style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
 
                         <div class="form-group">
                             <label for="contact-name">Name</label>

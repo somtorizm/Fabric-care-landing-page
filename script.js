@@ -221,7 +221,7 @@ if (bookingForm) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        // Note: Form will submit to Formspree automatically
+        // Note: Form will submit to Netlify Forms automatically
         // The loading state will show briefly before redirect
         setTimeout(() => {
             submitBtn.textContent = originalText;
@@ -251,7 +251,7 @@ if (contactForm) {
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        // Note: Form will submit to Formspree automatically
+        // Note: Form will submit to Netlify Forms automatically
         setTimeout(() => {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;

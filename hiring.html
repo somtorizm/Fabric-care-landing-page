@@ -529,108 +529,11 @@
                     <p>Fill out the application form below and we'll get back to you soon!</p>
 
                     <!-- Application Form -->
-                    <form action="https://api.web3forms.com/submit" method="POST" class="application-form" id="applicationForm">
-                        <!-- Web3Forms Access Key (Replace with your actual key) -->
-                        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
-
-                        <!-- Redirect to success page -->
-                        <input type="hidden" name="redirect" value="https://fabricare.ng/thank-you.html">
-
-                        <!-- From Name -->
-                        <input type="hidden" name="from_name" value="Fabricare Careers">
-
-                        <!-- Email subject -->
-                        <input type="hidden" name="subject" value="New Job Application - Laundry-man Position">
-
-                        <!-- Auto-reply configuration -->
-                        <input type="hidden" name="replyto" value="jobs@fabricare.ng">
-                        <input type="hidden" name="autoresponse" value="true">
-
-                        <!-- Branded Auto-Reply Email Template -->
-                        <input type="hidden" name="template" value="
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-</head>
-<body style='margin: 0; padding: 0; font-family: Inter, Arial, sans-serif; background-color: #f8fcff;'>
-    <table width='100%' cellpadding='0' cellspacing='0' style='background-color: #f8fcff; padding: 40px 20px;'>
-        <tr>
-            <td align='center'>
-                <table width='600' cellpadding='0' cellspacing='0' style='background-color: #ffffff; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 40px rgba(74, 144, 226, 0.15);'>
-                    <!-- Header -->
-                    <tr>
-                        <td style='background: linear-gradient(135deg, #4A90E2 0%, #5BB5D8 50%, #4ECDC4 100%); padding: 40px 30px; text-align: center;'>
-                            <h1 style='color: #ffffff; margin: 0; font-size: 28px; font-weight: 700;'>Fabricare Laundromat</h1>
-                            <p style='color: rgba(255, 255, 255, 0.9); margin: 8px 0 0 0; font-size: 14px; letter-spacing: 2px; text-transform: uppercase;'>Clean Clothes, Fresh Start</p>
-                        </td>
-                    </tr>
-
-                    <!-- Main Content -->
-                    <tr>
-                        <td style='padding: 40px 30px;'>
-                            <h2 style='color: #2C3E50; margin: 0 0 20px 0; font-size: 24px;'>Application Received!</h2>
-
-                            <p style='color: #4A5568; line-height: 1.8; margin: 0 0 20px 0; font-size: 16px;'>
-                                Dear Applicant,
-                            </p>
-
-                            <p style='color: #4A5568; line-height: 1.8; margin: 0 0 20px 0; font-size: 16px;'>
-                                Thank you for applying for the <strong>Laundry-man position</strong> at Fabricare Laundromat! We have successfully received your application.
-                            </p>
-
-                            <!-- Position Details Box -->
-                            <table width='100%' cellpadding='0' cellspacing='0' style='background: linear-gradient(135deg, rgba(74, 144, 226, 0.08), rgba(91, 181, 216, 0.08)); border-radius: 12px; border-left: 4px solid #5BB5D8; margin: 20px 0;'>
-                                <tr>
-                                    <td style='padding: 20px;'>
-                                        <p style='margin: 0 0 10px 0; color: #2C3E50; font-weight: 600; font-size: 16px;'>Position Details:</p>
-                                        <p style='margin: 5px 0; color: #4A5568; font-size: 15px;'>📍 <strong>Role:</strong> Laundry-man</p>
-                                        <p style='margin: 5px 0; color: #4A5568; font-size: 15px;'>💰 <strong>Salary:</strong> ₦70,000 - ₦80,000/month</p>
-                                        <p style='margin: 5px 0; color: #4A5568; font-size: 15px;'>👤 <strong>Age Range:</strong> 18-30 years</p>
-                                    </td>
-                                </tr>
-                            </table>
-
-                            <h3 style='color: #2C3E50; margin: 30px 0 15px 0; font-size: 18px;'>What Happens Next?</h3>
-
-                            <ol style='color: #4A5568; line-height: 1.8; padding-left: 20px; margin: 0 0 20px 0;'>
-                                <li style='margin-bottom: 10px;'>Our HR team will review your application within 3-5 business days</li>
-                                <li style='margin-bottom: 10px;'>Qualified candidates will be contacted for an interview</li>
-                                <li style='margin-bottom: 10px;'>We'll reach out via phone or email with next steps</li>
-                            </ol>
-
-                            <p style='color: #4A5568; line-height: 1.8; margin: 20px 0; font-size: 16px;'>
-                                If you have any questions, feel free to contact us at <a href='mailto:jobs@fabricare.ng' style='color: #4A90E2; text-decoration: none;'>jobs@fabricare.ng</a> or call <a href='tel:+2347048157132' style='color: #4A90E2; text-decoration: none;'>+234 704 815 7132</a>.
-                            </p>
-
-                            <p style='color: #4A5568; line-height: 1.8; margin: 20px 0 0 0; font-size: 16px;'>
-                                Best regards,<br>
-                                <strong style='color: #2C3E50;'>The Fabricare Team</strong>
-                            </p>
-                        </td>
-                    </tr>
-
-                    <!-- Footer -->
-                    <tr>
-                        <td style='background: linear-gradient(135deg, #2C5F8D 0%, #2C3E50 100%); padding: 30px; text-align: center;'>
-                            <p style='color: rgba(255, 255, 255, 0.9); margin: 0 0 15px 0; font-size: 14px;'>
-                                📍 2 Prof. Chike Onochie Crescent, New Haven Extension, Enugu<br>
-                                📞 +234 704 815 7132 | ✉️ jobs@fabricare.ng
-                            </p>
-
-                            <p style='color: rgba(255, 255, 255, 0.7); margin: 15px 0 0 0; font-size: 12px;'>
-                                © 2025 Fabricare Laundromat. All rights reserved.
-                            </p>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
-</body>
-</html>
-">
+                    <form method="POST" class="application-form" id="applicationForm" data-netlify="true" data-netlify-honeypot="bot-field" name="job-application">
+                        <input type="hidden" name="form-name" value="job-application">
+                        <p style="display: none;">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
 
                         <div class="form-row">
                             <div class="form-group-apply">
