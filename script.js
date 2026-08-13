@@ -485,10 +485,11 @@ if (datetimeInput) {
 const serviceSelect = document.getElementById('service');
 if (serviceSelect) {
     const prices = {
-        'self-service': '₦800 per load',
-        'drop-off': '₦1,200 per 5kg',
-        'pickup-delivery': '₦1,500 per 5kg',
-        'dry-cleaning': 'From ₦2,000 per item'
+        'self-service': '₦5,500 (4kg load)',
+        'wash-fold': '₦5,500 (4kg)',
+        'full-service': '₦6,500 (7kg)',
+        'premium': '₦7,500 (9kg)',
+        'steam-pressing': 'From ₦350 per item'
     };
 
     serviceSelect.addEventListener('change', (e) => {
